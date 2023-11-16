@@ -48,6 +48,7 @@ i {
 */
 main {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .logo #small-logo {
@@ -100,10 +101,10 @@ a {
     font-size: 2em;
 }
   
-.content {
+/*.content {
     flex: 1;
     padding: 20px;
-}
+}*/
 
 .account {
     justify-content: flex-end;
@@ -128,6 +129,101 @@ a {
 
 .account div span {
     font-weight: bold;
+}
+
+.container {
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #141922;
+    color: white;
+    height: calc(100vh - 100px);
+    overflow: auto;
+
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 60px;
+}
+
+.button-container {
+    padding: 20px;
+}
+
+.button {
+    color: white;
+    border:1px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.header-nav {
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.header-nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #7A7D81;
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.my-col {
+    width: calc((100% / 6) - 20px);
+    margin: 10px;
+}
+
+.song-img img {
+    /*width: 150px;
+    height: 150px;*/
+    width: 100%;
+    height: 100%;
+}
+
+.container h3, .container p {
+    margin-left: 10px;
+}
+
+.circle img {
+    border-radius: 50%;
+}
+
+.song-info {
+    text-align: center;
+}
+
+.container h2 {
+    margin-left: 10px;
+}
+
+.container p {
+    color: #737373;
+    font-size: 0.8em;
+}
+
+.song-info p {
+    color:#737373;
+}
+
+.second-section {
+    width: 100%;
 }
 
 /* 
@@ -217,11 +313,19 @@ a {
 
 /* PC SMALL */
 @media screen and (max-width: 1100px) {
-    
+
+    .my-col {
+        width: calc((100% / 4) - 20px);
+    }
 }
 
 /* TABLET */
 @media screen and (max-width: 700px) {
+
+    .my-col {
+        width: calc((100% / 2) - 20px);
+    }
+
     .icons {
         display: block;
     }
@@ -254,6 +358,10 @@ a {
 
     hr {
         display: none;
+    }
+
+    .container {
+        width: calc(100vw - 60px);
     }
 }
 
