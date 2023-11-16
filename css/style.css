@@ -6,32 +6,183 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 /* 
     GENERAL
 */
 
-html {
-    font-family: Arial, Helvetica, sans-serif;
+/* 
+   HEADER
+*/
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.window {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
 }
+
+.window * {
+    border-radius: 5px;
+}
+
+.fa-table-cells {
+    margin-right: 5px;
+}
+
+/*
+    MAIN
+*/
+main {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #040404;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .logo img {
+    width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  i {
+    margin-right: 10px;
+  }
+  
+  .playlist {
+    margin-top: auto;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+/* 
+   FOOTER
+*/
+
+.footer-soundbar {
+    background-color: #282828;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+  
+.track-info {
+    display: flex;
+    align-items: center;
+}
+  
+.track-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.song-details {
+    margin-right: 20px;
+}
+
+.song-details p,.song-bar p {
+    font-size: 0.8em;
+}
+
+.song-details p, .icons i {
+    color: #737373;
+}
+
+.song-details h4 {
+    margin: 0;
+}
+
+.playback-controls {
+    text-align: center;
+}
+
+.playback-controls i {
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.song-bar {
+    display: flex;
+}
+
+.volume-control {
+    text-align: right;
+}
+  
+.volume-control i {
+    margin: 0 5px;
+}
+  
+.song-slider {
+    width: 100%;
+}
+
+.volume-slider {
+    width: 30%;
+}
+
+.song-control {
+    width: 40%;
+}
+
+
 
 /* 
     RESPONSIVE
 */
 
 /* PC SMALL */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
     
 }
 
 /* TABLET */
 @media screen and (max-width: 700px) {
+    .icons {
+        display: block;
+    }
 
 }
 

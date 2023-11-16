@@ -9,6 +9,7 @@
         <title>Spotify</title>
 
         <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/style.css">
 
     </head>
@@ -17,25 +18,75 @@
         
         <!-- Inizio Header Principale -->
         <header>
-            <div class="container">
-                HEADER
-            </div>
+            
         </header>
         <!-- Fine Header Principale -->
         
         <!-- Inizio Main -->
         <main>
-            <div class="container">
-                MAIN
-            </div>
+            <div class="sidebar">
+                <div class="logo">
+                  <img src="./img/logo.svg" alt="Spotify Logo">
+                </div>
+                <ul>
+                  <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                  <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
+                  <li><a href="#"><i class="fas fa-book-open"></i> Your Library</a></li>
+                  <li><a href="#"><i class="fas fa-plus"></i> Create Playlist</a></li>
+                </ul>
+                <div class="playlist">
+                  <h3>Your Playlists</h3>
+                  <ul>
+                    <li><a href="#">Playlist 1</a></li>
+                    <li><a href="#">Playlist 2</a></li>
+                    <li><a href="#">Playlist 3</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            <div>
+                
+        
         </main>
         <!-- Fine Main -->
         
         <!-- Inizio Footer Principale -->
         <footer>
-            <div class="container">
-                FOOTER
+            <div class="footer-soundbar">
+                <div class="track-info">
+                  <img src="./img/sinister.jpeg" alt="Album Cover">
+                  <div class="song-details">
+                    <h4>Sinister</h4>
+                    <p>Brano nome</p>
+                  </div>
+                  <div class="icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                  </div>
+                </div>
+                <div class="song-control">
+                    <div class="playback-controls">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fas fa-step-backward"></i>
+                        <i class="fa-regular fa-circle-play"></i>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    <div class="song-bar">
+                        <p>0:25</p>
+                        <input type="range" min="0" max="100" value="25" class="song-slider">
+                        <p>4:35</p>
+                    </div>
+                </div>
+                
+                <div class="volume-control">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fas fa-volume-up"></i>
+                    <input type="range" min="0" max="100" value="25" class="volume-slider">
+                </div>
             </div>
+            
         </footer>
         <!-- Fine Footer Principale -->
 
