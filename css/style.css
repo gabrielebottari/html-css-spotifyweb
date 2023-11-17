@@ -171,6 +171,10 @@ a {
     flex-grow: 1;
 }
 
+.container section > * {
+    margin-bottom: 10px;
+}
+
 .install {
     color: var(--darkgrey);
 }
@@ -266,6 +270,10 @@ li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.song-info {
+    margin-top: 10px;
 }
 
 .my-col:hover .overlay {
