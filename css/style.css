@@ -1,7 +1,6 @@
 /* 
     RESET
 */
-
 * {
     margin: 0;
     padding: 0;
@@ -9,16 +8,22 @@
     font-family: sans-serif;
 }
 
+:root {
+    --darkgrey: #737373;
+    --lightgrey: #A3A3A3;
+    --green: #ADFF2F;
+    --white: #FFF;
+}
+
 /* 
     GENERAL
 */
-
 i {
     margin-right: 5px;
 }
 
 .playlist h3:hover, li a:hover, .fa-heart:hover, .fa-folder:hover {
-    color: white;
+    color: var(--white);
 }
 
 /* 
@@ -56,7 +61,7 @@ main {
 }
 
 .sidebar a, .playlist, .install {
-    color: #A3A3A3;
+    color: var(--lightgrey);
 }
 
 .library h3 {
@@ -160,24 +165,24 @@ a {
     display: flex;
     flex-wrap: wrap;
     background-color: #141922;
-    color: white;
+    color: var(--white);
     height: calc(100vh - 100px);
     overflow: auto;
     flex-grow: 1;
 }
 
 .install {
-    color: #737373;
+    color: var(--darkgrey);
 }
 
 hr {
     height: 2px;
-    background-color: #737373;
+    background-color: var(--darkgrey);
     border: none;
 }
 
 .install:hover {
-    color: white;
+    color: var(--white);
 }
 
 .header {
@@ -193,8 +198,8 @@ hr {
 }
 
 .button {
-    color: white;
-    border:1px solid white;
+    color: var(--white);
+    border:1px solid var(--white);
     border-radius: 25px;
     padding: 20px 40px;
     vertical-align: middle;
@@ -219,7 +224,7 @@ hr {
 
 li a {
     text-decoration: none;
-    color: #7A7D81;
+    color: var(--darkgrey);
 }
 
 .my-row {
@@ -252,7 +257,7 @@ li a {
     width: 100%;
     height: 100%;
     display: none;
-    color: #FFF;
+    color: var(--white);
 }
 
 .song-img .overlay i {
@@ -263,7 +268,7 @@ li a {
     transform: translate(-50%, -50%);
 }
 
-.song-img:hover .overlay {
+.my-col:hover .overlay {
     display: block;
     background: rgba(0, 0, 0, .6);
 }
@@ -281,26 +286,24 @@ li a {
 }
 
 .container h4 {
-    color: #737373;
+    color: var(--darkgrey);
     font-size: 0.8em;
 }
 
 .song-info p {
-    color:#737373;
+    color: var(--darkgrey);
 }
 
 .second-section {
     width: 100%;
 }
 
-
 /* 
    FOOTER
 */
-
 .footer-soundbar {
     background-color: #282828;
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -331,11 +334,11 @@ li a {
 }
 
 .song-details p, .icons i {
-    color: #737373;
+    color: var(--darkgrey);
 }
 
 .song-details:hover p {
-    color: white;
+    color: var(--white);
     text-decoration: underline;
 }
 
@@ -386,7 +389,7 @@ li a {
 
 .bar {
     height: 5px;
-    background-color: #737373;
+    background-color: var(--darkgrey);
     margin: 5px;
     width: 100%;
     border-radius: 5px;
@@ -402,14 +405,14 @@ li a {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--white);
     display: none;
     transform: translate(-50% , -25%);
 }
 
 .song-slider {
     height: 5px;
-    background-color: #A3A3A3;
+    background-color: var(--lightgrey);
     border-radius: 5px;
     height: 100%;
     width: 100%;
@@ -418,7 +421,7 @@ li a {
 
 .volume-slider {
     height: 5px;
-    background-color: #A3A3A3;
+    background-color: var(--lightgrey);
     border-radius: 5px;
     height: 100%;
     width: 30%;
@@ -434,7 +437,7 @@ li a {
 }
 
 .bar:hover .slider {
-    background-color: #ADFF2F;
+    background-color: var(--green);
 }
 
 .bar:hover .pointer {
@@ -507,7 +510,6 @@ li a {
         width: calc(100vw - 60px);
     }
 }
-
 
 @media screen and (min-height: 500px) {
     .scrollbar {
