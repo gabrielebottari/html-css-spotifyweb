@@ -21,13 +21,16 @@
                 <div class="logo">
                     <img src="./img/logo.svg" alt="Spotify Logo" id="full-logo">
                     <img src="./img/logo-small.svg" alt="logo small" id="small-logo">
+                </div>
+                <div class="library">
                     <ul>
                         <div id="border-left"><li><a href="#"><img src="./img/home.svg" alt="home" id="borderleft"><span>Home</span></a></li></div>
                         <li><a href="#"><img src="./img/search.svg" alt="search"><span>Search</span></a></li>
                         <li><a href="#"><img src="./img/libreria.svg" alt="library"><span>Your Library</span></a></li>
                     </ul>
-                    <div class="playlist">
-                        <h3><span><i class="fa-solid fa-square-plus"></i></span><span>Crea Playlist</span></h3>
+                    <h3><span><i class="fa-solid fa-square-plus"></i></span><span>Crea Playlist</span></h3>
+                </div>    
+                <div class="playlist">
                     <ul>
                         <li><a href="#"><span>Nuova Playlist</span></a></li>
                         <li><a href="#"><span>Nuova Playlist</span></a></li>
@@ -41,18 +44,16 @@
                         <li><a href="#"><span>Nuova Playlist</span></a></li>
                     </ul>
                 </div>
-                </div>
-                
-                    <div class="account">
-                            <div class="side-img"><img src="./img/download.svg" alt="download"></div>
-                            <span class="install">Installa App</span>
-                        <hr>
-                        <div class="profile">
-                            <div class="side-img"><img src="./img/profile.svg" alt="profile"></div>
+                <div class="account">
+                    <div class="side-img"><img src="./img/download.svg" alt="download"></div>
+                    <span class="install">Installa App</span>
+                    <hr>
+                    <div class="profile">
+                        <div class="side-img"><img src="./img/profile.svg" alt="profile"></div>
                             <span>John Doe</span>
                         </div>
                     </div>
-              </div>
+                </div>
             <div>
 
             <div class="container">
@@ -257,7 +258,7 @@
                     </div>
                     <div class="song-bar">
                         <p>0:25</p>
-                        <input type="range" min="0" max="100" value="25" class="song-slider">
+                        <div class="bar"><div class="slider song-slider"></div><div class="pointer"></div></div>
                         <p>4:35</p>
                     </div>
                 </div>
@@ -266,7 +267,9 @@
                     <i class="fa-solid fa-bars"></i>
                     <i class="fa-solid fa-desktop"></i>
                     <i class="fas fa-volume-up"></i>
-                    <input type="range" min="0" max="100" value="25" class="volume-slider">
+                    <div class="volume-bar">
+                        <div class="bar"><div class="slider volume-slider"></div><div class="pointer"></div></div>
+                    </div>
                 </div>
             </div>
             

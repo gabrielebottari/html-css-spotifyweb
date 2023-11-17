@@ -31,22 +31,6 @@ i {
     z-index: 1;
 }
 
-.window {
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: black;
-}
-
-.window * {
-    border-radius: 5px;
-}
-
-.fa-table-cells {
-    margin-right: 5px;
-}
-
 /*
     MAIN
 */
@@ -68,11 +52,19 @@ main {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
 }
 
 .sidebar a, .playlist, .install {
     color: #A3A3A3;
+}
+
+.library h3 {
+    font-size: 1.1em;
+}
+
+.fa-square-plus {
+    font-size: 1.5em;
 }
   
 .logo img {
@@ -90,8 +82,7 @@ ul {
 }
   
 li {
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;   
 }
   
 a {
@@ -101,13 +92,24 @@ a {
     position: relative;
 }
 
+.playlist {
+    min-height: 100px;
+    overflow: auto;
+    height: 100%;
+}
+
+.account {
+    justify-content: flex-end;
+    background-color: #040404;
+}
+
 #border-left {
     border-left: 3px solid #ADFF2F;
     margin-left: -20px;
     padding-left: 20px;
 }
 
-.header-nav #underline:before {
+.header-nav #underline::after {
     position: absolute;
     left: 35px;
     top: 1.2em;
@@ -122,7 +124,6 @@ a {
 }
   
 .account {
-    justify-content: flex-end;
     font-size: 0.8em;
 }
 
@@ -163,11 +164,16 @@ a {
     height: calc(100vh - 100px);
     overflow: auto;
     flex-grow: 1;
-
 }
 
-.install, hr {
+.install {
     color: #737373;
+}
+
+hr {
+    height: 2px;
+    background-color: #737373;
+    border: none;
 }
 
 .install:hover {
@@ -228,6 +234,7 @@ li a {
     width: calc((100% / 6) - 20px);
     margin: 10px;
 }
+
 .song-img{
     position: relative;
 }
@@ -235,6 +242,7 @@ li a {
 .song-img img {
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 .song-img .overlay {
@@ -345,7 +353,7 @@ li a {
 }
 
 .playback-controls i {
-    padding: 0 5px;
+    padding: 0 3px;
     padding-bottom: 5px;
     cursor: pointer;
     font-size: 1.4em;
@@ -355,25 +363,92 @@ li a {
     display: flex;
 }
 
-.volume-control {
-    text-align: right;
-}
-  
-.volume-control i {
-    margin: 0 5px;
-}
-  
-.song-slider {
-    width: 100%;
+.song-bar p {
+    font-size: 0.8em;
 }
 
-.volume-slider {
-    width: 30%;
+.volume-control {
+    display: flex;
+    text-align: right;
+}
+ 
+.volume-bar {
+    width: 70px;
+}
+
+.volume-control i {
+    margin: 0 5px;
 }
 
 .song-control {
     width: 40%;
 }
+
+.bar {
+    height: 5px;
+    background-color: #737373;
+    margin: 5px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+}
+
+.bar > * {
+    vertical-align: middle;
+}
+
+.pointer{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+    transform: translate(-50% , -25%);
+}
+
+.song-slider {
+    height: 5px;
+    background-color: #A3A3A3;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    animation: fillBar 275s linear infinite;
+}
+
+.volume-slider {
+    height: 5px;
+    background-color: #A3A3A3;
+    border-radius: 5px;
+    height: 100%;
+    width: 30%;
+}
+
+.slider::after {
+    display: none;
+    content: '';
+    height: 12px;
+    width:  12px;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.bar:hover .slider {
+    background-color: #ADFF2F;
+}
+
+.bar:hover .pointer {
+    display: block;
+}
+
+@keyframes fillBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
 
 /* 
     RESPONSIVE
@@ -431,6 +506,16 @@ li a {
     .container {
         width: calc(100vw - 60px);
     }
+}
+
+
+@media screen and (min-height: 500px) {
+    .scrollbar {
+        overflow: auto;
+        position: absolute;
+        z-index: 1;
+    }
+    
 }
 
     
